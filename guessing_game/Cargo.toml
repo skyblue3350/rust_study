@@ -5,3 +5,5 @@ authors = ["sky <skyblue3350@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+rand="0.3.0"
+

@@ -11,6 +11,10 @@ impl Philosopher {
             name: name.to_string(),
         }
     }
+
+    fn eat(&self) {
+        println!("{} is done eating", self.name);
+    }
 }
 
 fn main() {
@@ -21,5 +25,6 @@ fn main() {
 
     for p in &philosophers {
         println!("name: {}", p.name);
+        p.eat();
     }
 }

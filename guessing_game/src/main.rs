@@ -23,7 +23,10 @@ fn main() {
         println!("You guessed: {}", guess);
 
         // 比較用に型を揃える
-        let guess: u32 = guess.trim().parse().expect("please type number");
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
 
         match guess.cmp(&secret_number) {
             Ordering::Less    => println!("Too small"),
